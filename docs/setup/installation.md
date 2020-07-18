@@ -8,9 +8,6 @@
 
     Also, if you trash your server or wreck your data, that's on you. Test your backups. Trust nothing.
 
-* [Watch Video Tutorial - Cloud Based Server](https://youtu.be/p8cD349BGRI)
-* [Watch Video Tutorial - Local Server](https://youtu.be/Zy6Xfl5b5z4)
-
 ## Requirements
 
 ### Server
@@ -70,11 +67,31 @@ to act as a bastion host via Tinc vpn and nginx.
 
 S3 is Amazon's Simple Storage Service which HomelabOS can optionally use to back up to. You can use Amazon's service, or one of many other S3 compatible providers. You can also back up to another HomelabOS instance if that other instance is running Minio, a self-hosted S3 service.
 
+# Installation
+
+[Video Installation Tutorial](https://youtu.be/lbmViEFTj4o)
+
 ## Automatic Set-up (One-liner)
 
 * On your server run: `bash <(curl -s https://gitlab.com/NickBusey/HomelabOS/-/raw/master/install_homelabos.sh)`
 
 * Make sure to back up your `{{ volumes_root }}/install` directory nightly.
+
+### But isn't piping bash to curl insecure?
+
+Not really. If you're using https (we are), then you can be sure you're getting the file you expect.
+
+This is also the recommended installation method of:
+
+* [Rust](https://www.rust-lang.org/tools/install)
+* [homebrew](https://brew.sh/)
+* [RVM](https://rvm.io/rvm/install).
+* [Docker](https://get.docker.com/)
+* [DockSTARTer](https://dockstarter.com/)
+ 
+It's pretty standard practice at this point.
+
+If you still don't trust it, great, you'll fit right in here. Proceed to the Manual Set-up step below.
 
 ## Manual Set-up
 

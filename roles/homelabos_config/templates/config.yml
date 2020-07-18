@@ -4,6 +4,9 @@
 # SSH accessible IP address
 homelab_ip: {{ homelab_ip }}
 
+# SSH Port
+homelab_port: {{ homelab_port | default('22') }}
+
 # User name used to connect via ssh. Must have passwordless sudo.
 homelab_ssh_user: {{ homelab_ssh_user }}
 
@@ -181,6 +184,7 @@ authelia:
   auth: "{{ vault.authelia.enable }}"
   domain: "{{ vault.authelia.domain }}"
   subdomain: "{{ vault.authelia.subdomain }}"
+  redirect_url:  "{{ vault.authelia.redirect_url }}"
   # Determines how verbose the logs are
   log_level: "{{ vault.authelia.log_level }}"
   # Do you want to login with your common name "john doe" or your username "jdoe"?
@@ -549,6 +553,8 @@ matomo:
   auth: {{ matomo.auth | default(False) }}
   domain: {{ matomo.domain | default(False) }}
   subdomain: {{ matomo.subdomain | default("matomo") }}
+matterbridge:
+  enable: {{ matterbridge.enable | default(enable_matterbridge, None) | default(False) }}
 mayan:
   enable: {{ mayan.enable | default(enable_mayan, None) | default(False) }}
   https_only: {{ mayan.https_only | default(False) }}
@@ -651,6 +657,13 @@ nzbget:
   auth: {{ nzbget.auth | default(False) }}
   domain: {{ nzbget.domain | default(False) }}
   subdomain: {{ nzbget.subdomain | default("nzbget") }}
+octoprint:
+  enable: {{ octoprint.enable | default(enable_octoprint, None) | default(False) }}
+  https_only: {{ octoprint.https_only | default(False) }}
+  serial: {{ octoprint.serial | default(False)}}
+  auth: {{ octoprint.auth | default(False) }}
+  domain: {{ octoprint.domain | default(False) }}
+  subdomain: {{ octoprint.subdomain | default("octoprint")}}
 ombi:
   enable: {{ ombi.enable | default(enable_ombi, None) | default(False) }}
   https_only: {{ ombi.https_only | default(False) }}

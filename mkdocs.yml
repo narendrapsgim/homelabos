@@ -28,13 +28,14 @@ nav:
   - Getting Started: setup/gettingstarted.md
   - Troubleshooting / FAQ: setup/faq.md
   - Setup:
-    - Backups: setup/backups.md
-    - Bastion Server: setup/bastion.md
-    - Email: setup/email.md
-    - Traefik: setup/traefik.md
-    - Terraform: setup/terraform.md
-    - Tor Onion Services: setup/tor.md
-    - VPN Setup: setup/vpn.md
+      - Backups: setup/backups.md
+      - Bastion Server: setup/bastion.md
+      - Email: setup/email.md
+      - Storage: setup/storage.md
+      - Traefik: setup/traefik.md
+      - Terraform: setup/terraform.md
+      - Tor Onion Services: setup/tor.md
+      - VPN Setup: setup/vpn.md
   - Included Software:
     - Analytics:
       - Matomo: software/matomo.md
@@ -47,6 +48,7 @@ nav:
     - Calendaring and Contacts Management:
       - NextCloud: software/nextcloud.md
     - Chat:
+      - Matterbridge: software/matterbridge.md
       - The Lounge: software/thelounge.md
       - Zulip: software/zulip.md
     - Document Management:
@@ -113,6 +115,7 @@ nav:
       - Monica: software/monica.md
       - n8n: software/n8n.md
       - NodeRED: software/nodered.md
+      - OctoPrint: software/octoprint.md
       - Pi-hole: software/pihole.md
       - Poli: software/poli.md
       - Portainer: software/portainer.md
@@ -173,7 +176,7 @@ nav:
       - Bookstack: software/bookstack.md
       - Tiddlywiki: software/tiddlywiki.md
   - Development:
-    - Adding Services: development/adding_services.md
-    - Contributing: development/contributing.md
-    - Migrations: development/migrations.md
-    - Vagrant: development/vagrant.md
+      - Adding Services: development/adding_services.md
+      - Contributing: development/contributing.md
+      - Migrations: development/migrations.md
+      - Vagrant: development/vagrant.md
